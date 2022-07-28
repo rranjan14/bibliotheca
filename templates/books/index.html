@@ -1,0 +1,13 @@
+{{ define "books/index.html" }}
+{{ template "base/header.html" }}
+
+<h2>My Books</h2>
+
+<ul>
+{{ range .books }}
+<li>{{ .Title }} -- {{ .Author }}</li>
+{{ end }}
+</ul>
+
+{{ template "base/footer.html" . }}
+{{ end }}
